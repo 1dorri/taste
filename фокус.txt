@@ -1,0 +1,18 @@
+import tkinter as tk
+from tkinter import *
+
+windows = Tk()
+windows.title("Фокус со словами")
+windows.geometry(350x175)
+
+frame = Frame(window, padx=10, pady=10)
+frame.pack()
+
+width_tf=Etry(frame)
+width_tf.grid(row=3, column=1)
+cal_btn=Button(frame, text="->", command=focus_st)
+cal_btn.grid(row=3, column=2)
+length_tf=Etry(frame)
+length_tf.grid(row=3, column=3)
+
+window.mainloop()

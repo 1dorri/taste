@@ -1,0 +1,27 @@
+class Worker(object):
+  def __init__(self, name, post, age):
+    self.name = name
+    self.post = post
+    self.age = age
+class Manager(Worker):
+    def __init__(self, name,post,age,data):
+        super().__init__(name, post, age)
+        self.data = data
+    def __str__(self):
+        return f'Менеджер {self.name} запостил {self.post} новостей. Ему {self.age} лет'
+class Administrator(Worker):
+    def __init__(self,name,post,age,premium):
+        super().__init__(name, post, age)
+        self.premium = premium
+    def __str__(self):
+        return f'Администратор {self.name} написал {self.post} страниц.Недавно ему стало {self.age} лет.Его премия составляет {self.premium}.'
+class Programmer(Worker):
+    def __init__(self,name,post,age,salary):
+        super().__init__(name, post, age)
+        self.salary = salary
+    def __str__(self):
+        return f'Программист {self.name} постил {self.post} картинок.Ему уже {self.age} лет. Его надбавка всего лишь {self.salary}.' 
+p=Manager(input(),input(),input(),input())
+a=Administrator(input(),input(),input(),input())
+l=Programmer(input(),input(),input(),input())
+print(p, a, l)
